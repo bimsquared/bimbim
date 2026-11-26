@@ -808,7 +808,7 @@
             const pass = document.getElementById('gate-password').value;
             const errorBanner = document.getElementById('gate-error-banner');
 
-            if (user === 'admin' && pass === 'admin') {
+            if (user === 'admin' && pass === 'P@ssw0rd') {
                 errorBanner.classList.add('hidden');
                 try {
                     sessionStorage.setItem(SESSION_KEY, 'authenticated');
