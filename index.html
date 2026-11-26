@@ -23,12 +23,11 @@
 </head>
 <body class="bg-slate-50 text-slate-900 min-h-screen flex flex-col antialiased">
 
-    <!-- BUILT-IN VSU LOGIN GATE (Single-file ready, no external login.html required) -->
-    <div id="login-gate" class="fixed inset-0 z-50 bg-gradient-to-br from-emerald-950 via-emerald-900 to-slate-900 flex items-center justify-center p-4">
-        <div class="w-full max-w-md bg-white rounded-3xl shadow-2xl border border-emerald-100/20 overflow-hidden">
-            <div class="bg-gradient-to-b from-emerald-50 to-white px-8 pt-8 pb-6 text-center border-b border-slate-100">
-                <div class="w-24 h-24 mx-auto mb-4 rounded-full bg-white shadow-md p-1 flex items-center justify-center overflow-hidden border-2 border-emerald-700/20">
-                    <!-- VSU Search for Truth Monument Vector Emblem -->
+    <!-- BUILT-IN VSU LOGIN GATE -->
+    <div id="login-gate" class="fixed inset-0 z-50 overflow-y-auto bg-gradient-to-br from-emerald-950 via-emerald-900 to-slate-900 flex items-center justify-center p-4">
+        <div class="w-full max-w-md my-auto bg-white rounded-3xl shadow-2xl border border-emerald-100/20 overflow-hidden">
+            <div class="bg-gradient-to-b from-emerald-50 to-white px-6 pt-5 pb-4 text-center border-b border-slate-100">
+                <div class="w-16 h-16 mx-auto mb-3 rounded-full bg-white shadow-md p-1 flex items-center justify-center overflow-hidden border-2 border-emerald-700/20">
                     <svg class="w-full h-full rounded-full" viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="VSU Search for Truth Emblem">
                         <defs>
                             <linearGradient id="vsuSunBgGate" x1="0%" y1="0%" x2="100%" y2="100%">
@@ -42,26 +41,14 @@
                                 <stop offset="100%" stop-color="#14532d"/>
                             </linearGradient>
                         </defs>
-                        <!-- Golden Sunburst Background & Concentric Halo -->
                         <rect width="200" height="200" fill="url(#vsuSunBgGate)"/>
                         <circle cx="100" cy="100" r="88" fill="#fef08a" opacity="0.45"/>
                         <circle cx="100" cy="100" r="72" fill="#fde047" opacity="0.65"/>
-
-                        <!-- Pedestal Base -->
                         <polygon points="24,200 30,183 124,173 142,190 150,200" fill="#14532d"/>
-
-                        <!-- Male Figure (Left, raising hand holding torch/coconut) -->
                         <path d="M61,181 L70,136 L83,104 L76,78 L55,66 L46,45 C44,41 45,35 48,31 C49,26 53,23 56,25 C58,28 56,34 53,38 L55,44 L63,60 L84,69 L81,62 C79,56 82,49 87,49 C92,49 95,54 95,60 L96,68 L108,85 L103,115 L112,150 L110,176 L100,177 L97,145 L89,122 L78,148 L70,180 Z" fill="url(#vsuStatueGradGate)"/>
-
-                        <!-- Female Figure (Right, leaning beside male figure) -->
                         <path d="M81,179 L92,140 L96,105 L93,78 C87,74 86,65 91,59 C92,51 96,44 102,44 C108,44 112,50 113,58 L115,61 L130,66 L136,80 C138,85 134,88 130,85 L122,76 L124,96 L123,124 L134,158 L138,186 L126,184 L118,156 L110,126 L104,154 L93,178 Z" fill="#166534"/>
-
-                        <!-- Right Arm & Extended Hand Detail -->
                         <path d="M123,100 L137,122 L140,130 L135,131 L133,125 L131,132 L128,131 L129,123 L120,108 Z" fill="#15803d"/>
-
-                        <!-- Palm Fronds & Stems -->
                         <g fill="#14532d" stroke="#14532d" stroke-linecap="round">
-                            <!-- Tall right palm stem & fronds -->
                             <path d="M114,175 Q116,105 129,55 L143,43" fill="none" stroke-width="2.2"/>
                             <path d="M143,43 C139,34 134,30 136,28 C140,30 144,36 145,42 Z"/>
                             <path d="M144,42 C145,32 148,27 151,28 C151,32 148,37 146,42 Z"/>
@@ -70,8 +57,6 @@
                             <path d="M147,44 C155,44 158,49 156,54 C153,51 150,47 146,45 Z"/>
                             <path d="M145,45 C149,50 148,57 145,58 C143,55 143,49 144,45 Z"/>
                             <path d="M143,44 C140,51 135,55 133,53 C134,49 139,46 142,44 Z"/>
-
-                            <!-- Center-top palm stem & fronds -->
                             <path d="M111,175 Q107,108 111,46" fill="none" stroke-width="2"/>
                             <path d="M111,46 C104,39 98,38 97,40 C100,43 106,45 110,47 Z"/>
                             <path d="M111,45 C109,37 111,32 114,33 C115,36 114,41 112,45 Z"/>
@@ -79,8 +64,6 @@
                             <path d="M113,46 C120,44 125,47 124,50 C121,50 116,49 113,47 Z"/>
                             <path d="M112,47 C117,52 117,58 114,59 C112,56 111,51 111,48 Z"/>
                             <path d="M110,47 C107,53 102,56 100,54 C102,50 106,48 109,47 Z"/>
-
-                            <!-- Left lower foliage cluster -->
                             <path d="M82,115 C76,112 73,107 75,105 C78,107 81,111 83,114 Z"/>
                             <path d="M83,114 C80,106 80,101 83,101 C85,104 85,109 84,113 Z"/>
                             <path d="M84,114 C85,107 88,103 90,104 C90,107 87,111 85,114 Z"/>
@@ -93,7 +76,7 @@
                 <p class="text-xs text-slate-500 mt-1">ICT Equipment Maintenance Portal</p>
             </div>
 
-            <form onsubmit="handleInlineLogin(event)" class="p-8 space-y-5">
+            <form onsubmit="handleInlineLogin(event)" class="p-6 space-y-4">
                 <div id="gate-error-banner" class="hidden rounded-xl bg-rose-50 border border-rose-200 px-4 py-3 text-xs font-medium text-rose-700">
                     Incorrect username or password. Please try again.
                 </div>
@@ -105,4 +88,454 @@
                     <label for="gate-password" class="block text-xs font-semibold text-slate-700 mb-1.5">Password</label>
                     <input type="password" id="gate-password" autocomplete="current-password" placeholder="Enter password" required class="w-full px-4 py-2.5 bg-slate-50 border border-slate-200 rounded-xl text-sm text-slate-900 focus:outline-none focus:ring-2 focus:ring-emerald-600 focus:bg-white">
                 </div>
-                <button type="submit" class="w-full py-3 px-4 rounded-xl bg-emerald
+                <button type="submit" class="w-full py-3 px-4 rounded-xl bg-emerald-700 hover:bg-emerald-800 text-white font-semibold text-sm shadow-md transition-all cursor-pointer">
+                    Sign In to Dashboard
+                </button>
+            </form>
+        </div>
+    </div>
+
+    <!-- Top Navigation Header -->
+    <header class="bg-white border-b border-slate-200 sticky top-0 z-30 no-print">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-3.5 flex flex-wrap items-center justify-between gap-4">
+            <div class="flex items-center gap-3.5">
+                <div class="w-12 h-12 rounded-full bg-white shadow-sm border border-emerald-200 p-0.5 flex items-center justify-center shrink-0">
+                    <svg class="w-full h-full" viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Visayas State University Seal">
+                        <circle cx="100" cy="100" r="98" fill="#ffffff" stroke="#0b5d1e" stroke-width="4"/>
+                        <circle cx="100" cy="100" r="93" fill="none" stroke="#0b5d1e" stroke-width="2"/>
+                        <circle cx="100" cy="100" r="61" fill="#0b5d1e" stroke="#0b5d1e" stroke-width="2.5"/>
+                        <circle cx="100" cy="100" r="57" fill="none" stroke="#ffffff" stroke-width="1"/>
+                        <defs>
+                            <path id="vsuOuterTop" d="M 27,100 A 73,73 0 1,1 173,100"/>
+                            <path id="vsuOuterBottom" d="M 181,104 A 81,81 0 0,1 19,104"/>
+                            <path id="vsuInnerTop" d="M 52,100 A 48,48 0 1,1 148,100"/>
+                            <path id="vsuInnerBottom" d="M 152,102 A 52,52 0 0,1 48,102"/>
+                        </defs>
+                        <text fill="#0b5d1e" font-size="18.5" font-weight="800" font-family="Georgia, serif" letter-spacing="1.4">
+                            <textPath href="#vsuOuterTop" startOffset="50%" text-anchor="middle">VISAYAS STATE</textPath>
+                        </text>
+                        <text fill="#0b5d1e" font-size="19" font-weight="800" font-family="Georgia, serif" letter-spacing="1.8">
+                            <textPath href="#vsuOuterBottom" startOffset="50%" text-anchor="middle">UNIVERSITY</textPath>
+                        </text>
+                        <g transform="translate(22, 84)">
+                            <path d="M9,2 H15 V9 L21,21 C22,23 20.5,25 18.5,25 H5.5 C3.5,25 2,23 3,21 L9,9 Z" fill="#ffffff" stroke="#111827" stroke-width="1.8"/>
+                            <line x1="6.5" y1="18" x2="17.5" y2="18" stroke="#111827" stroke-width="1.4"/>
+                            <path d="M12,17 V3" stroke="#0b5d1e" stroke-width="1.6"/>
+                            <ellipse cx="15" cy="9" rx="3.2" ry="1.6" transform="rotate(-25 15 9)" fill="#16a34a"/>
+                            <ellipse cx="9" cy="6.5" rx="3" ry="1.5" transform="rotate(25 9 6.5)" fill="#16a34a"/>
+                            <circle cx="12" cy="2" r="2.2" fill="#facc15"/>
+                        </g>
+                        <g transform="translate(154, 84)">
+                            <circle cx="12" cy="13" r="10.5" fill="none" stroke="#111827" stroke-width="2.2" stroke-dasharray="3.2 2.2"/>
+                            <circle cx="12" cy="13" r="8" fill="#ffffff" stroke="#111827" stroke-width="1.4"/>
+                            <path d="M6,16 V11 L10,13 V11 L14,13 V16 Z" fill="#facc15" stroke="#111827" stroke-width="1"/>
+                            <rect x="14.5" y="8" width="2" height="8" fill="#111827"/>
+                            <path d="M5,16.5 H19 M7,19 H17" stroke="#111827" stroke-width="1.1"/>
+                        </g>
+                        <text fill="#ffffff" font-size="7.6" font-weight="700" font-family="Inter, sans-serif" letter-spacing="0.9">
+                            <textPath href="#vsuInnerTop" startOffset="50%" text-anchor="middle">RELEVANCE  •  INTEGRITY</textPath>
+                        </text>
+                        <text fill="#ffffff" font-size="7.3" font-weight="700" font-family="Inter, sans-serif" letter-spacing="0.7">
+                            <textPath href="#vsuInnerBottom" startOffset="50%" text-anchor="middle">TRUTH   •   1924   •   EXCELLENCE</textPath>
+                        </text>
+                        <g fill="#f7d74c" stroke="#0b5d1e" stroke-width="1.2">
+                            <path d="M69,75 C69,71 72,69 76,69 H114 V81 H81 V108 H69 Z"/>
+                            <path d="M125,69 C129,69 131,72 131,76 V114 H119 V81 H92 V69 Z"/>
+                            <path d="M131,125 C131,129 128,131 124,131 H86 V119 H119 V92 H131 Z"/>
+                            <path d="M75,131 C71,131 69,128 69,124 V86 H81 V119 H108 V131 Z"/>
+                        </g>
+                        <circle cx="100" cy="100" r="18" fill="#0b5d1e"/>
+                        <g fill="none" stroke="#ffffff" stroke-width="2.6" stroke-linecap="round">
+                            <path d="M90,93 A 12,12 0 0,1 107,90"/>
+                            <path d="M107,90 A 12,12 0 0,1 110,107"/>
+                            <path d="M110,107 A 12,12 0 0,1 93,110"/>
+                            <path d="M93,110 A 12,12 0 0,1 90,93"/>
+                        </g>
+                        <polygon points="108,87 109,93 103,91" fill="#ffffff"/>
+                        <polygon points="113,108 107,109 109,103" fill="#ffffff"/>
+                        <polygon points="92,113 91,107 97,109" fill="#ffffff"/>
+                        <polygon points="87,92 93,91 91,97" fill="#ffffff"/>
+                        <circle cx="100" cy="100" r="4.2" fill="#0b5d1e" stroke="#f7d74c" stroke-width="2.2"/>
+                    </svg>
+                </div>
+                <div>
+                    <p class="text-[10px] font-bold uppercase tracking-widest text-emerald-700">Visayas State University</p>
+                    <h1 class="text-base sm:text-lg font-extrabold text-slate-900 leading-tight">Repair Analytics &amp; Logbook</h1>
+                </div>
+            </div>
+
+            <!-- Navigation View Switcher -->
+            <nav class="flex items-center bg-slate-100 p-1 rounded-xl border border-slate-200/80">
+                <button id="tab-dashboard" onclick="switchView('dashboard')" class="px-3 sm:px-4 py-1.5 rounded-lg text-xs sm:text-sm font-semibold transition-all bg-white text-emerald-700 shadow-sm">
+                    Dashboard
+                </button>
+                <button id="tab-records" onclick="switchView('records')" class="px-3 sm:px-4 py-1.5 rounded-lg text-xs sm:text-sm font-semibold transition-all text-slate-600 hover:text-slate-900">
+                    Repair Log
+                </button>
+                <button id="tab-report" onclick="switchView('report')" class="px-3 sm:px-4 py-1.5 rounded-lg text-xs sm:text-sm font-semibold transition-all text-slate-600 hover:text-slate-900">
+                    Accomplishment Report
+                </button>
+            </nav>
+
+            <!-- Primary Actions -->
+            <div class="flex items-center gap-2">
+                <button onclick="openModal()" class="inline-flex items-center gap-1.5 px-3.5 py-2 rounded-xl bg-emerald-700 hover:bg-emerald-800 text-white text-xs sm:text-sm font-semibold shadow-sm transition-all">
+                    <svg class="w-4 h-4" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" d="M12 4.5v15m7.5-7.5h-15" />
+                    </svg>
+                    <span>New Repair</span>
+                </button>
+                <button onclick="logoutUser()" class="inline-flex items-center gap-1.5 px-3 py-2 rounded-xl bg-slate-100 hover:bg-rose-50 text-slate-700 hover:text-rose-700 border border-slate-200 text-xs sm:text-sm font-semibold transition-all" title="Sign Out">
+                    <svg class="w-4 h-4" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" d="M15.75 9V5.25A2.25 2.25 0 0013.5 3h-6a2.25 2.25 0 00-2.25 2.25v13.5A2.25 2.25 0 007.5 21h6a2.25 2.25 0 002.25-2.25V15m3 0l3-3m0 0l-3-3m3 3H9" />
+                    </svg>
+                    <span class="hidden sm:inline">Logout</span>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <!-- Main Content Container -->
+    <main class="flex-1 max-w-7xl w-full mx-auto px-4 sm:px-6 lg:px-8 py-6 space-y-6">
+
+        <!-- Filter & Export Toolbar -->
+        <section class="bg-white rounded-2xl border border-slate-200/90 p-4 shadow-sm flex flex-wrap items-center justify-between gap-3 no-print">
+            <div class="flex flex-wrap items-center gap-2.5 flex-1">
+                <select id="filter-month" onchange="applyFilters()" class="px-3 py-2 bg-slate-50 border border-slate-200 rounded-xl text-xs sm:text-sm font-medium text-slate-700 focus:outline-none focus:ring-2 focus:ring-emerald-600">
+                    <option value="ALL">All Months</option>
+                </select>
+                <select id="filter-equipment" onchange="applyFilters()" class="px-3 py-2 bg-slate-50 border border-slate-200 rounded-xl text-xs sm:text-sm font-medium text-slate-700 focus:outline-none focus:ring-2 focus:ring-emerald-600">
+                    <option value="ALL">All Device Types / Brands</option>
+                </select>
+                <select id="filter-status" onchange="applyFilters()" class="px-3 py-2 bg-slate-50 border border-slate-200 rounded-xl text-xs sm:text-sm font-medium text-slate-700 focus:outline-none focus:ring-2 focus:ring-emerald-600">
+                    <option value="ALL">All Statuses</option>
+                    <option value="Repaired">Repaired</option>
+                    <option value="Not Repaired/Need to purchase parts">Not Repaired/Need to purchase parts</option>
+                </select>
+            </div>
+            <div class="flex items-center gap-2">
+                <input type="file" id="csv-file-input" accept=".csv" class="hidden" onchange="handleCSVImport(event)">
+                <button onclick="document.getElementById('csv-file-input').click()" class="inline-flex items-center gap-1.5 px-3.5 py-2 rounded-xl bg-emerald-50 hover:bg-emerald-100 text-emerald-800 border border-emerald-200 text-xs sm:text-sm font-semibold transition-all">
+                    <svg class="w-4 h-4" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" d="M3 16.5v2.25A2.25 2.25 0 005.25 21h13.5A2.25 2.25 0 0021 18.75V16.5m-13.5-9L12 3m0 0l4.5 4.5M12 3v13.5" />
+                    </svg>
+                    <span>Import CSV</span>
+                </button>
+                <button onclick="exportToCSV()" class="inline-flex items-center gap-1.5 px-3.5 py-2 rounded-xl bg-slate-900 hover:bg-slate-800 text-white text-xs sm:text-sm font-semibold transition-all">
+                    <svg class="w-4 h-4" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" d="M3 16.5v2.25A2.25 2.25 0 005.25 21h13.5A2.25 2.25 0 0021 18.75V16.5M16.5 12L12 16.5m0 0L7.5 12m4.5 4.5V3" />
+                    </svg>
+                    <span>Export CSV</span>
+                </button>
+            </div>
+        </section>
+
+        <!-- VIEW 1: ANALYTICS DASHBOARD -->
+        <div id="view-dashboard" class="space-y-6">
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
+                <div class="bg-white rounded-2xl border border-slate-200/90 p-5 shadow-sm">
+                    <p class="text-xs font-semibold uppercase tracking-wider text-slate-400">Total Repairs</p>
+                    <p id="kpi-total-repairs" class="text-3xl font-extrabold text-slate-900 mt-2">0</p>
+                    <p class="text-xs text-slate-500 mt-1">Logged service entries</p>
+                </div>
+                <div class="bg-white rounded-2xl border border-slate-200/90 p-5 shadow-sm">
+                    <p class="text-xs font-semibold uppercase tracking-wider text-slate-400">Repaired Units</p>
+                    <p id="kpi-repaired-count" class="text-3xl font-extrabold text-emerald-700 mt-2">0</p>
+                    <p id="kpi-pending-parts-count" class="text-xs text-amber-600 font-medium mt-1">0 Not Repaired / Need parts</p>
+                </div>
+                <div class="bg-white rounded-2xl border border-slate-200/90 p-5 shadow-sm">
+                    <p class="text-xs font-semibold uppercase tracking-wider text-slate-400">Most Serviced Device</p>
+                    <p id="kpi-top-device" class="text-xl font-extrabold text-slate-900 mt-2 truncate">—</p>
+                    <p id="kpi-top-device-count" class="text-xs text-slate-500 mt-1">0 units serviced</p>
+                </div>
+                <div class="bg-white rounded-2xl border border-slate-200/90 p-5 shadow-sm">
+                    <p class="text-xs font-semibold uppercase tracking-wider text-slate-400">Top Diagnosed Issue</p>
+                    <p id="kpi-top-issue" class="text-xl font-extrabold text-slate-900 mt-2 truncate">—</p>
+                    <p id="kpi-top-issue-count" class="text-xs text-slate-500 mt-1">0 occurrences</p>
+                </div>
+            </div>
+
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-6">
+                <div class="bg-white rounded-2xl border border-slate-200/90 p-5 shadow-sm">
+                    <h2 class="text-sm font-bold text-slate-800 mb-4">Repairs by Device Type / Brand</h2>
+                    <div class="h-64">
+                        <canvas id="chart-device-brand"></canvas>
+                    </div>
+                </div>
+                <div class="bg-white rounded-2xl border border-slate-200/90 p-5 shadow-sm">
+                    <h2 class="text-sm font-bold text-slate-800 mb-4">Repairs by Diagnosed Issue</h2>
+                    <div class="h-64">
+                        <canvas id="chart-repair-issues"></canvas>
+                    </div>
+                </div>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+                <div class="bg-white rounded-2xl border border-slate-200/90 p-5 shadow-sm">
+                    <h3 class="text-sm font-bold text-slate-800 mb-3">Device Breakdown</h3>
+                    <div class="overflow-x-auto">
+                        <table class="w-full text-xs text-left">
+                            <thead class="text-slate-400 border-b border-slate-200">
+                                <tr>
+                                    <th class="py-2 px-2">Device / Brand</th>
+                                    <th class="py-2 px-2 text-right">Count</th>
+                                </tr>
+                            </thead>
+                            <tbody id="device-summary-body" class="divide-y divide-slate-100"></tbody>
+                        </table>
+                    </div>
+                </div>
+                <div class="bg-white rounded-2xl border border-slate-200/90 p-5 shadow-sm">
+                    <h3 class="text-sm font-bold text-slate-800 mb-3">Issue Breakdown</h3>
+                    <div class="overflow-x-auto">
+                        <table class="w-full text-xs text-left">
+                            <thead class="text-slate-400 border-b border-slate-200">
+                                <tr>
+                                    <th class="py-2 px-2">Issue</th>
+                                    <th class="py-2 px-2 text-right">Count</th>
+                                </tr>
+                            </thead>
+                            <tbody id="issue-summary-body" class="divide-y divide-slate-100"></tbody>
+                        </table>
+                    </div>
+                </div>
+                <div class="bg-white rounded-2xl border border-slate-200/90 p-5 shadow-sm">
+                    <h3 class="text-sm font-bold text-slate-800 mb-3">Repair Status Breakdown</h3>
+                    <div class="overflow-x-auto">
+                        <table class="w-full text-xs text-left">
+                            <thead class="text-slate-400 border-b border-slate-200">
+                                <tr>
+                                    <th class="py-2 px-2">Status</th>
+                                    <th class="py-2 px-2 text-right">Count</th>
+                                </tr>
+                            </thead>
+                            <tbody id="status-summary-body" class="divide-y divide-slate-100"></tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+
+            <div class="bg-white rounded-2xl border border-slate-200/90 p-5 shadow-sm space-y-5">
+                <div>
+                    <h2 class="text-sm font-bold text-slate-800">Device vs. Issue Cross-Tabulation</h2>
+                    <p class="text-xs text-slate-500 mt-0.5">Exact intersection of equipment type/brand against diagnosed issues</p>
+                </div>
+                <div class="h-64">
+                    <canvas id="chart-device-issue-stacked"></canvas>
+                </div>
+                <div class="overflow-x-auto border border-slate-200 rounded-xl">
+                    <table class="w-full text-xs text-left">
+                        <thead id="crosstab-head" class="bg-slate-50 text-slate-600 font-semibold border-b border-slate-200"></thead>
+                        <tbody id="crosstab-body" class="divide-y divide-slate-100"></tbody>
+                        <tfoot id="crosstab-foot" class="bg-slate-100 font-bold text-slate-900 border-t border-slate-200"></tfoot>
+                    </table>
+                </div>
+            </div>
+        </div>
+
+        <!-- VIEW 2: REPAIR LOGBOOK TABLE -->
+        <div id="view-records" class="hidden space-y-4">
+            <div class="bg-white rounded-2xl border border-slate-200/90 p-4 shadow-sm flex flex-wrap items-center justify-between gap-3">
+                <div class="relative flex-1 min-w-[220px]">
+                    <input type="text" id="search-input" oninput="applyFilters()" placeholder="Search by ID, device, issue, action taken, or remarks..." class="w-full pl-9 pr-4 py-2 bg-slate-50 border border-slate-200 rounded-xl text-xs sm:text-sm focus:outline-none focus:ring-2 focus:ring-emerald-600">
+                    <svg class="w-4 h-4 text-slate-400 absolute left-3 top-2.5" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" d="M21 21l-5.197-5.197m0 0A7.5 7.5 0 105.196 5.196a7.5 7.5 0 0010.607 10.607z" />
+                    </svg>
+                </div>
+                <div class="flex items-center gap-3">
+                    <span id="record-count-label" class="text-xs font-semibold text-slate-500">Showing 0 records</span>
+                    <button id="delete-all-btn" onclick="confirmDeleteAllRecords()" class="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-xl bg-rose-50 hover:bg-rose-100 text-rose-700 border border-rose-200 text-xs font-semibold transition-all disabled:opacity-40 disabled:pointer-events-none">
+                        <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" d="M14.74 9l-.346 9m-4.788 0L9.26 9m9.968-3.21c.342.052.682.107 1.022.166m-1.022-.165L18.16 19.673a2.25 2.25 0 01-2.244 2.077H8.084a2.25 2.25 0 01-2.244-2.077L4.772 5.79m14.456 0a48.108 48.108 0 00-3.478-.397m-12 .562c.34-.059.68-.114 1.022-.165m0 0a48.11 48.11 0 013.478-.397m7.5 0v-.916c0-1.18-.91-2.164-2.09-2.201a51.964 51.964 0 00-3.32 0c-1.18.037-2.09 1.022-2.09 2.201v.916m7.5 0a48.667 48.667 0 00-7.5 0" />
+                        </svg>
+                        <span>Delete All</span>
+                    </button>
+                </div>
+            </div>
+
+            <div class="bg-white rounded-2xl border border-slate-200/90 shadow-sm overflow-hidden">
+                <div class="overflow-x-auto">
+                    <table class="w-full text-left border-collapse">
+                        <thead class="bg-slate-50 border-b border-slate-200 text-[11px] font-bold uppercase tracking-wider text-slate-500">
+                            <tr>
+                                <th class="py-3 px-4">Repair ID</th>
+                                <th class="py-3 px-4">Date</th>
+                                <th class="py-3 px-4">Device / Brand</th>
+                                <th class="py-3 px-4">Issue</th>
+                                <th class="py-3 px-4">Action Taken</th>
+                                <th class="py-3 px-4">Technician</th>
+                                <th class="py-3 px-4">Remarks</th>
+                                <th class="py-3 px-4">Status</th>
+                                <th class="py-3 px-4 text-right">Actions</th>
+                            </tr>
+                        </thead>
+                        <tbody id="records-table-body" class="divide-y divide-slate-100 text-sm"></tbody>
+                    </table>
+                </div>
+                <div id="empty-state" class="hidden py-12 px-4 text-center">
+                    <p class="text-sm font-semibold text-slate-700">No repair records found</p>
+                    <p class="text-xs text-slate-400 mt-1">Click "New Repair" in the top bar to log your first entry.</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- VIEW 3: PRINTABLE ACCOMPLISHMENT REPORT -->
+        <div id="view-report" class="hidden space-y-6">
+            <div class="flex flex-wrap items-center justify-between gap-3 bg-white p-4 rounded-2xl border border-slate-200 shadow-sm no-print">
+                <div>
+                    <h2 class="text-sm font-bold text-slate-900">Accomplishment Report Preview</h2>
+                    <p class="text-xs text-slate-500">Print-ready summary for Visayas State University ICT repair records</p>
+                </div>
+                <div class="flex items-center gap-2">
+                    <button onclick="exportReportCSV()" class="px-3.5 py-2 rounded-xl bg-slate-100 hover:bg-slate-200 text-slate-800 text-xs font-semibold transition-all">
+                        Export Summary CSV
+                    </button>
+                    <button onclick="window.print()" class="px-4 py-2 rounded-xl bg-emerald-700 hover:bg-emerald-800 text-white text-xs font-semibold shadow-sm transition-all">
+                        Print / Save PDF
+                    </button>
+                </div>
+            </div>
+
+            <div class="bg-white rounded-2xl border border-slate-200 p-6 sm:p-10 shadow-sm space-y-6">
+                <div class="flex flex-col sm:flex-row items-center justify-between gap-4 border-b-2 border-emerald-800 pb-5">
+                    <div class="flex items-center gap-4">
+                        <div class="w-16 h-16 shrink-0">
+                            <svg class="w-full h-full" viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
+                                <circle cx="100" cy="100" r="98" fill="#ffffff" stroke="#0b5d1e" stroke-width="4"/>
+                                <circle cx="100" cy="100" r="61" fill="#0b5d1e"/>
+                                <g fill="#f7d74c">
+                                    <path d="M69,75 C69,71 72,69 76,69 H114 V81 H81 V108 H69 Z"/>
+                                    <path d="M125,69 C129,69 131,72 131,76 V114 H119 V81 H92 V69 Z"/>
+                                    <path d="M131,125 C131,129 128,131 124,131 H86 V119 H119 V92 H131 Z"/>
+                                    <path d="M75,131 C71,131 69,128 69,124 V86 H81 V119 H108 V131 Z"/>
+                                </g>
+                                <circle cx="100" cy="100" r="14" fill="#0b5d1e" stroke="#ffffff" stroke-width="2"/>
+                            </svg>
+                        </div>
+                        <div class="text-center sm:text-left">
+                            <p class="text-xs font-bold uppercase tracking-wider text-emerald-800">Republic of the Philippines</p>
+                            <h2 class="text-lg font-extrabold text-slate-900">VISAYAS STATE UNIVERSITY</h2>
+                            <p class="text-xs text-slate-600">Visca, Baybay City, Leyte • ICT Equipment Repair &amp; Maintenance</p>
+                        </div>
+                    </div>
+                    <div class="text-center sm:text-right text-xs text-slate-600">
+                        <p class="font-bold text-slate-900 uppercase">Accomplishment Report</p>
+                        <p id="report-period-label">Coverage: All Recorded Periods</p>
+                        <p id="report-generated-date"></p>
+                    </div>
+                </div>
+
+                <div class="grid grid-cols-3 gap-4 text-center">
+                    <div class="p-3 rounded-xl border border-slate-300 bg-slate-50">
+                        <p class="text-[11px] font-bold uppercase text-slate-500">Total Units Serviced</p>
+                        <p id="rep-kpi-total" class="text-2xl font-extrabold text-slate-900 mt-1">0</p>
+                    </div>
+                    <div class="p-3 rounded-xl border border-slate-300 bg-emerald-50/60">
+                        <p class="text-[11px] font-bold uppercase text-emerald-800">Repaired Units</p>
+                        <p id="rep-kpi-repaired" class="text-2xl font-extrabold text-emerald-800 mt-1">0</p>
+                    </div>
+                    <div class="p-3 rounded-xl border border-slate-300 bg-amber-50/60">
+                        <p class="text-[11px] font-bold uppercase text-amber-800">Needs Parts Replacement</p>
+                        <p id="rep-kpi-pending" class="text-2xl font-extrabold text-amber-800 mt-1">0</p>
+                    </div>
+                </div>
+
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                    <div>
+                        <h3 class="text-xs font-bold uppercase tracking-wider text-slate-800 mb-2">I. Summary by Device Type / Brand</h3>
+                        <table class="w-full text-xs border-collapse border border-slate-300">
+                            <thead class="bg-slate-100">
+                                <tr>
+                                    <th class="py-1.5 px-3 border border-slate-300 text-left">Device / Brand</th>
+                                    <th class="py-1.5 px-3 border border-slate-300 text-right">Count</th>
+                                </tr>
+                            </thead>
+                            <tbody id="rep-device-body"></tbody>
+                        </table>
+                    </div>
+                    <div>
+                        <h3 class="text-xs font-bold uppercase tracking-wider text-slate-800 mb-2">II. Summary by Diagnosed Issue</h3>
+                        <table class="w-full text-xs border-collapse border border-slate-300">
+                            <thead class="bg-slate-100">
+                                <tr>
+                                    <th class="py-1.5 px-3 border border-slate-300 text-left">Diagnosed Issue</th>
+                                    <th class="py-1.5 px-3 border border-slate-300 text-right">Count</th>
+                                </tr>
+                            </thead>
+                            <tbody id="rep-issue-body"></tbody>
+                        </table>
+                    </div>
+                </div>
+
+                <div>
+                    <h3 class="text-xs font-bold uppercase tracking-wider text-slate-800 mb-2">III. Detailed Repair &amp; Maintenance Accomplishment Log</h3>
+                    <div class="overflow-x-auto">
+                        <table class="w-full text-xs border-collapse border border-slate-300">
+                            <thead class="bg-slate-100">
+                                <tr>
+                                    <th class="py-1.5 px-3 border border-slate-300 text-left">Repair ID</th>
+                                    <th class="py-1.5 px-3 border border-slate-300 text-left">Date</th>
+                                    <th class="py-1.5 px-3 border border-slate-300 text-left">Device / Brand</th>
+                                    <th class="py-1.5 px-3 border border-slate-300 text-left">Issue</th>
+                                    <th class="py-1.5 px-3 border border-slate-300 text-left">Action Taken</th>
+                                    <th class="py-1.5 px-3 border border-slate-300 text-left">Remarks</th>
+                                    <th class="py-1.5 px-3 border border-slate-300 text-left">Status</th>
+                                </tr>
+                            </thead>
+                            <tbody id="rep-pending-body"></tbody>
+                        </table>
+                    </div>
+                </div>
+
+                <div class="pt-8 grid grid-cols-1 sm:grid-cols-2 gap-8 text-xs">
+                    <div>
+                        <p class="text-slate-500">Prepared by:</p>
+                        <p class="font-bold text-slate-900 uppercase mt-8 border-t border-slate-400 inline-block pt-1 pr-12">Cherubim Doque</p>
+                        <p class="text-slate-600">ICT Technician / Personnel</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- ADD / EDIT REPAIR MODAL -->
+    <div id="repair-modal" class="fixed inset-0 bg-slate-900/50 backdrop-blur-xs hidden items-center justify-center p-4 z-50">
+        <div class="bg-white rounded-2xl max-w-lg w-full shadow-2xl border border-slate-200 overflow-hidden">
+            <div class="px-6 py-4 bg-slate-50 border-b border-slate-200 flex items-center justify-between">
+                <h3 id="modal-title" class="text-base font-bold text-slate-900">Log New Repair</h3>
+                <button onclick="closeModal()" class="text-slate-400 hover:text-slate-600 text-xl font-bold leading-none">&times;</button>
+            </div>
+            <form id="repair-form" onsubmit="handleFormSubmit(event)" class="p-6 space-y-4">
+                <input type="hidden" id="entry-id">
+                <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                    <div>
+                        <label for="entry-date" class="block text-xs font-semibold text-slate-700 mb-1">Date</label>
+                        <input type="date" id="entry-date" required class="w-full px-3 py-2 bg-slate-50 border border-slate-200 rounded-xl text-sm focus:outline-none focus:ring-2 focus:ring-emerald-600">
+                    </div>
+                    <div>
+                        <label for="entry-status" class="block text-xs font-semibold text-slate-700 mb-1">Repair Status</label>
+                        <select id="entry-status" required class="w-full px-3 py-2 bg-slate-50 border border-slate-200 rounded-xl text-sm focus:outline-none focus:ring-2 focus:ring-emerald-600">
+                            <option value="Repaired">Repaired</option>
+                            <option value="Not Repaired/Need to purchase parts">Not Repaired/Need to purchase parts</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                    <div>
+                        <label for="entry-equipment" class="block text-xs font-semibold text-slate-700 mb-1">Device Type / Brand</label>
+                        <input type="text" id="entry-equipment" list="device-suggestions" required placeholder="e.g., Epson printer" class="w-full px-3 py-2 bg-slate-50 border border-slate-200 rounded-xl text-sm focus:outline-none focus:ring-2 focus:ring-emerald-600">
+                        <datalist id="device-suggestions">
+                            <option value="Epson printer">
+                            <option value="Desktop">
+                            <option value="Laptop">
+                            <option value="Brother printer">
+                            <option value="Canon printer">
+                            <option value="HP printer">
+                            <option value="UPS">
+                            <option value="Monitor">
+                            <option value="Scanner">
+                        </datalist>
+                    </div>
+                    <div>
+                        <label for="entry-issue" class="block text-xs font-semibold text-slate-700 mb-1">Diagnosed Issue</label>
+                        <input type="text" id="entry-issue" list="issue-suggestions" required placeholder="e.g., Needs Reset" class="w-full px-3 py-
