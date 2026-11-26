@@ -809,7 +809,7 @@
             const pass = document.getElementById('gate-password').value;
             const errorBanner = document.getElementById('gate-error-banner');
 
-            if (user === 'admin' && pass === 'P@ssw0rd') {
+            if (user === 'admin' && pass === 'admin') {
                 errorBanner.classList.add('hidden');
                 try {
                     sessionStorage.setItem(SESSION_KEY, 'authenticated');
@@ -1302,18 +1302,60 @@
             const hasHeader = firstRow.some((h) => ['date', 'device', 'equipment', 'issue', 'status', 'repair id'].some((k) => h.includes(k)));
             const startIdx = hasHeader ? 1 : 0;
 
+            // Detect exact column positions from header row when available
+            const colMap = {
+                id: hasHeader ? firstRow.findIndex((h) => h.includes('id')) : -1,
+                date: hasHeader ? firstRow.findIndex((h) => h.includes('date')) : -1,
+                equipment: hasHeader ? firstRow.findIndex((h) => h.includes('device') || h.includes('equipment') || h.includes('brand')) : -1,
+                issue: hasHeader ? firstRow.findIndex((h) => h.includes('issue') || h.includes('problem')) : -1,
+                action: hasHeader ? firstRow.findIndex((h) => h.includes('action')) : -1,
+                tech: hasHeader ? firstRow.findIndex((h) => h.includes('tech')) : -1,
+                notes: hasHeader ? firstRow.findIndex((h) => h.includes('remark') || h.includes('note')) : -1,
+                status: hasHeader ? firstRow.findIndex((h) => h.includes('status')) : -1
+            };
+
             let importedCount = 0;
             for (let i = startIdx; i < lines.length; i++) {
                 const cols = parseCSVRow(lines[i]);
                 if (cols.length < 3) continue;
 
-                let id, date, equipment, issue, actionTaken, technician, notes, status;
-                if (/^REP-/i.test(cols[0])) {
-                    [id, date, equipment, issue, actionTaken, technician, notes, status] = cols;
+                let id, date, equipment, issue, actionTaken, technician, notes, rawStatus;
+
+                if (hasHeader && (colMap.equipment !== -1 || colMap.status !== -1)) {
+                    id = colMap.id !== -1 ? cols[colMap.id] : '';
+                    date = colMap.date !== -1 ? cols[colMap.date] : '';
+                    equipment = colMap.equipment !== -1 ? cols[colMap.equipment] : '';
+                    issue = colMap.issue !== -1 ? cols[colMap.issue] : '';
+                    actionTaken = colMap.action !== -1 ? cols[colMap.action] : '';
+                    technician = colMap.tech !== -1 ? cols[colMap.tech] : '';
+                    notes = colMap.notes !== -1 ? cols[colMap.notes] : '';
+                    rawStatus = colMap.status !== -1 ? cols[colMap.status] : '';
+                } else if (/^REP-/i.test(cols[0])) {
+                    if (cols.length >= 8) {
+                        [id, date, equipment, issue, actionTaken, technician, notes, rawStatus] = cols;
+                    } else {
+                        // 7-column CSV without Remarks column (Status is in the 7th column)
+                        [id, date, equipment, issue, actionTaken, technician, rawStatus] = cols;
+                        notes = '';
+                    }
                 } else {
-                    id = generateNextRepairId();
-                    [date, equipment, issue, actionTaken, technician, notes, status] = cols;
+                    id = '';
+                    if (cols.length >= 7) {
+                        [date, equipment, issue, actionTaken, technician, notes, rawStatus] = cols;
+                    } else {
+                        // 6-column CSV without ID or Remarks
+                        [date, equipment, issue, actionTaken, technician, rawStatus] = cols;
+                        notes = '';
+                    }
                 }
+
+                // Fallback: if status was placed in notes/remarks, extract it cleanly
+                if (!rawStatus && /not repaired|purchase parts|repaired/i.test(notes || '')) {
+                    rawStatus = notes;
+                    notes = '';
+                }
+
+                const isNotRepaired = /not\s*repaired|purchase\s*parts|pending|unrepaired/i.test(rawStatus || '');
 
                 const rec = {
                     id: id || generateNextRepairId(),
@@ -1323,7 +1365,7 @@
                     actionTaken: actionTaken || 'Serviced',
                     technician: technician || 'Cherubim Doque',
                     notes: notes || '',
-                    status: (status || '').toLowerCase().includes('not') ? 'Not Repaired/Need to purchase parts' : 'Repaired'
+                    status: isNotRepaired ? 'Not Repaired/Need to purchase parts' : 'Repaired'
                 };
                 await persistRepairRecord(rec);
                 importedCount++;
